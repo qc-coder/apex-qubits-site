@@ -1,0 +1,25 @@
+baseURL = "https://apexqubits.com"
+languageCode = "en-us"
+title = "Apex Qubits"
+theme = "hugo-hero"
+
+[params]
+  description = "Advancing superconducting quantum hardware from laboratory research to integrated processor technology."
+
+[params.footer]
+  copyright_text = "© 2026 Apex Qubits"
+
+[[menu.main]]
+    name = "About"
+    url = "/"          # This points to your homepage/about
+    weight = 1
+
+[[menu.main]]
+    name = "Team"
+    url = "/team/"     # This points to content/team/
+    weight = 2
+	
+[[menu.main]]
+	name = "contact"
+	url = "/contact/"
+	weight = 3

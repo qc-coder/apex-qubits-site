@@ -1,0 +1,11 @@
+members:
+  - name: "Vladimir Milchakov, PhD"
+    role: "Founder"
+    bio: "Vladimir is an experimental physicist with more than ten years of experience in superconducting quantum hardware. He carried out the first implementations that became the basis of this project during his doctoral work, and later worked on superconducting quantum processors in industry at IQM and Alice & Bob, connecting academic research with scalable hardware engineering. He leads the design, fabrication, and experimental roadmap toward the first integrated processor prototype."
+    image: "images/vladimir.jpg"
+    email: "founder@apexqubits.com"
+  - name: "Olivier Buisson, PhD"
+    role: "Scientific Advisor"
+    bio: "Olivier is a Directeur de Recherche (1st class) at CNRS and a leading figure in superconducting quantum circuits. His work since the late 1990s has advanced circuit quantum electrodynamics, nonlinear superconducting devices, and quantum measurement, and has influenced how experiments achieve high-fidelity qubit control and readout. As scientific advisor, he provides the theoretical foundation and long-term perspective guiding the development of a new generation of quantum processors."
+    image: "images/olivier.jpeg"
+    email: "olivier.buisson@neel.cnrs.fr"
