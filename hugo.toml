@@ -1,10 +1,10 @@
 baseURL = "https://apexqubits.com"
 languageCode = "en-us"
 title = "Apex Qubits"
-theme = "hugo-minimal-black"
+theme = "hugo-hero"
 
 [params]
-  subtitle = "Hardware for the quantum advantage"
+  description = "Advancing superconducting quantum hardware from laboratory research to integrated processor technology."
 
 [params.footer]
   copyright_text = "© 2026 Apex Qubits"
@@ -20,6 +20,6 @@ theme = "hugo-minimal-black"
     weight = 2
 	
 [[menu.main]]
-	name = "Contact"
+	name = "contact"
 	url = "/contact/"
 	weight = 3

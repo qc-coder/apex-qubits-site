@@ -1,20 +1,16 @@
 {{ define "main" }}
-<section class="layout-page section-stack">
-  <div class="article-layout">
-    <article class="article-main space-y-4">
-      <header class="space-y-2">
-        <!-- Site Title and Slogan -->
-        <h1 class="heading-page text-3xl sm:text-4xl font-bold">{{ .Site.Title }}</h1>
-        <p class="text-muted text-lg">{{ .Site.Params.subtitle }}</p>
-      </header>
+<div class="hero-image" {{ if .Params.heroBackground }}style="background-image: url('{{ .Params.heroBackground | relURL }}');"{{ end }}>
+    <div class="container text-center">
+        <h1 class="display-3 font-weight-bold">{{ .Params.heroHeading | default .Title }}</h1>
+        <p class="hero-text">{{ .Params.heroSubheading }}</p>
+    </div>
+</div>
 
-      <!-- Your About Content from content/_index.md -->
-      <div class="card card-pad">
-        <div class="markdown-body">
-          {{ .Content }}
+<div class="container pt-8 pb-8">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 content">
+            {{ .Content }}
         </div>
-      </div>
-    </article>
-  </div>
-</section>
+    </div>
+</div>
 {{ end }}
