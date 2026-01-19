@@ -7,7 +7,7 @@ theme = "hugo-hero"
   description = "Advancing superconducting quantum hardware from laboratory research to integrated processor technology."
 
 [params.footer]
-  copyright_text = "© 2026 Apex Qubits"
+  copyright_text = "© 2026 Apex Qubits&trade;. All rights reserved."
 
 [[menu.main]]
     name = "About"
