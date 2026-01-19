@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.css",
-	"sourceRoot": "/Users/salakard/Documents/web-sites/apex-qubits-site_Hugo Hero v1",
+	"sourceRoot": "/Users/salakard/Documents/web-sites/apex-qubits-site",
 	"sources": [
 		"assets/scss/style.scss",
 		"assets/scss/_bootstrap-variables.scss",
