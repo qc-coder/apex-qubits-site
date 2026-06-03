@@ -9,3 +9,8 @@ members:
     bio: "Olivier is a Directeur de Recherche (1st class) at CNRS and a leading figure in superconducting quantum circuits. His work since the late 1990s has advanced circuit quantum electrodynamics, nonlinear superconducting devices, and quantum measurement, and has influenced how experiments achieve high-fidelity qubit control and readout. As scientific advisor, he provides the theoretical foundation and long-term perspective guiding the development of a new generation of quantum processors."
     image: "images/olivier.jpeg"
     email: "olivier.buisson@neel.cnrs.fr"
+  - name: "Cyril Mori, PhD"
+    role: "Co-Founder"
+    bio: "Cyril is a quantum hardware specialist holding an engineering degree from Phelma (France) and a PhD in superconducting qubit systems. His doctoral research explored high-performance qubit design for state-of-the-art readout, as well as the study of error-inducing phenomena — investigating their underlying mechanisms in order to suppress them and improve overall reliability. He is passionate about bridging the gap between fundamental quantum research and scalable hardware engineering."
+    image: "images/cyril.jpg"
+    email: "cyril.mori@proton.me"
