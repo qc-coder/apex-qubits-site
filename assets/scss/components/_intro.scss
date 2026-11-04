@@ -17,7 +17,7 @@
     padding-bottom: 100px;
   }
   h1 {
-    color: $primary;
+    color: $near-white;
     font-size: 2.4rem;
     line-height: 1.2;
     font-family: $font-family-heading;
@@ -39,7 +39,7 @@
     font-size: 1.2rem;
     font-weight: light;
     line-height: 1.5;
-    color: $secondary;
+    color: $signal-grey;
     @include media-breakpoint-up(sm) {
       width: 70%;
     }

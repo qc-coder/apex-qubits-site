@@ -1,8 +1,8 @@
 @mixin whitebox($padding: 10px) {
-  border: 1px solid #dcdcdc;
+  border: 1px solid $tungsten;
   border-radius: 3px;
   box-shadow: 0 1px 18px rgba(0, 0, 0, 0.2);
-  background: #ffffff;
+  background: $graphite-neel;
   padding: $padding;
 }
 .whitebox {

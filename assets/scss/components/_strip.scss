@@ -2,10 +2,10 @@
   background-repeat: no-repeat;
 }
 .strip-white {
-  background-color: white;
+  background-color: $graphite-neel;
 }
 .strip-grey {
-  background-color: #f4f5fb;
+  background-color: $graphite-neel;
 }
 .strip-diagonal {
   transform: skewY(5deg);

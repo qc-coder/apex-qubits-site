@@ -15,16 +15,40 @@ $container-max-widths: (
 
 $grid-gutter-width: 20px;
 
-$white: #F0EEE9;
+// Apex Qubits brand palette (color guidelines v3, 3 Nov 2026)
+// Dark theme (primary, web)
+$abyss: #0A0C10;            // default ground
+$graphite-neel: #16191F;    // structure, machined dark metal
+$tungsten: #3A3F47;         // cool industrial grey
+$signal-grey: #8A9099;      // text, fine lines
+$near-white: #E8E9EC;       // headlines
+$arc-gold: #FFE08A;         // primary standing light
+$frost-plus: #A7CBE5;       // secondary light, blue only answers
+$collapse-orange: #FF4D00;  // rare event accent
+// Light theme (print, documents, bright rooms)
+$enamel: #F0EFEC;           // page ground
+$plate: #E2E1DC;            // cards
+$brass: #A8823A;            // light accent, large text and lines only
+$frost-deep: #4F7A9A;       // cold accent, large text and lines only
+
+$white: $near-white;
 $black: #000000;
-$dark: #111122;
-$primary: #0047AB;
-$secondary: #43454d;
+$dark: $graphite-neel;
+$primary: $abyss;
+$secondary: $tungsten;
+
+// Blue is an answer, never dominant: Frost Deep replaces the theme blue
+$blue: $frost-deep;
+
+// Dark theme page: Abyss ground, near-white text, gold and frost accents
+$body-bg: $abyss;
+$body-color: $near-white;
+$headings-color: $near-white;
 
 // Links
-$link-color: $primary;
+$link-color: $frost-plus;
 $link-decoration: none;
-$link-hover-color: lighten($primary, 20%);
+$link-hover-color: $arc-gold;
 $link-hover-decoration: underline;
 
 // Fonts

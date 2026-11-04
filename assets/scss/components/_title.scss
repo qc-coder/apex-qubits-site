@@ -1,5 +1,5 @@
 .title-1 {
-  color: $primary;
+  color: $near-white;
   font-size: 2.4rem;
   line-height: 1.2;
   font-family: $font-family-heading;
@@ -7,13 +7,13 @@
     font-size: 3rem;
   }
   &.black {
-    color: #222222;
+    color: $near-white;
   }
 }
 .title-2 {
   font-family: $font-family-base;
   font-weight: light;
-  color: #333333;
+  color: $signal-grey;
   font-size: 2.4rem;
   @include media-breakpoint-up(md) {
     font-size: 4rem;
@@ -25,7 +25,7 @@
 .title-3 {
   font-family: $font-family-base;
   font-weight: 600;
-  color: #2b2b39;
+  color: $near-white;
   font-size: 1.9rem;
   letter-spacing: -1px;
   @include media-breakpoint-up(sm) {

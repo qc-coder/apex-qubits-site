@@ -63,7 +63,7 @@
     background-size: cover;
     background-position: center;
     padding: 120px 0;
-    color: white;
+    color: $white;
 }
 
 .header {
@@ -77,7 +77,7 @@
   
   a {
     color: $white;
-    &:hover { color: $secondary; }
+    &:hover { color: $arc-gold; }
   }
 }
 
@@ -88,16 +88,16 @@
 
 // Hero Component Overrides
 .hero-image {
-  background-color: $primary;
+  // Tungsten ground: the banner's black pixels take this colour, its lines stay light
+  background-color: $tungsten;
   background-position: center;
   background-size: cover;
   padding: 120px 0;
   color: $white;
   position: relative;
-  
-  // This fix prevents the "over-colorised" look 
-  // by ensuring the background image is on top of the color
-  background-blend-mode: multiply; 
+
+  // Screen lightens the banner onto the ground instead of darkening it
+  background-blend-mode: screen;
   opacity: 1.0; 
 
   h1 {
@@ -108,5 +108,34 @@
     font-size: 1.5rem; // Hardware for the quantum advantag eand beyond
     font-weight: 300;
     opacity: 0.7;
+  }
+}
+// Team page: three members on one laptop screen
+.team-page {
+  .page-title {
+    margin-bottom: 1.5rem;
+  }
+  .team-member {
+    padding: 0 1rem 1rem;
+  }
+  .team-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 16px;
+  }
+  .team-name {
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+  }
+  .team-role {
+    color: $frost-plus;
+    margin-bottom: 10px;
+  }
+  .team-bio {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: $signal-grey;
   }
 }

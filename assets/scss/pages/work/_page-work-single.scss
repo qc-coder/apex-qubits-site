@@ -2,7 +2,7 @@
   h1.title {
     font-size: 3rem;
     font-family: $font-family-heading;
-    color: $primary;
+    color: $near-white;
   }
   .work-image {
     img {
@@ -27,7 +27,7 @@
   }
   .item {
     /* Masonry bricks or child elements */
-    background-color: #eee;
+    background-color: $graphite-neel;
     margin: 0 0 1em;
   }
 }

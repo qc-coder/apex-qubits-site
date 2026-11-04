@@ -5,34 +5,36 @@
   }
   > ul {
     display: flex;
+    gap: 4px;
     align-items: center;
     justify-content: flex-start;
     > li {
       list-style: none;
       font-size: 0.9rem;
       > a {
+        border-radius: 4px;
         padding: 10px 14px 10px 14px;
         display: inline-block;
         font-weight: regular;
         text-transform: uppercase;
         text-decoration: none;
-        color: $primary;
+        color: $near-white;
         &:hover {
-          background: $primary;
-          color: #ffffff;
+          background: $arc-gold;
+          color: $abyss;
           text-decoration: none;
         }
       }
       &.active {
         > a {
-          background: $primary;
+          background: $arc-gold;
           text-decoration: none;
-          color: #ffffff;
+          color: $abyss;
           &:hover {
             text-decoration: none;
-            background: $primary;
+            background: $arc-gold;
             transition: all 225ms ease-in 0s;
-            color: #ffffff;
+            color: $abyss;
           }
         }
       }

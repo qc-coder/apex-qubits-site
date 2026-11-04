@@ -25,7 +25,7 @@
         line-height: 1.8;
         strong {
           font-weight: bold;
-          color: #ffffff;
+          color: $white;
         }
         a {
           color: lighten($secondary, 40%);
@@ -39,11 +39,11 @@
           height: 40px;
           padding: 10px 0 10px 8px;
           font-weight: bold;
-          color: #ffffff;
+          color: $white;
         }
         &.zerostatic {
           a {
-            color: #ffffff;
+            color: $white;
           }
         }
       }
