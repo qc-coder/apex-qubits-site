@@ -1,17 +1,23 @@
 {{ define "main" }}
 
-<div class="container pt-8 pb-8 text-center">
+<div class="container pt-5 pb-5 text-center team-page">
   <h1 class="display-4 page-title">Our Team</h1>
-  <div class="row justify-content-center">
-    {{ range .Site.Data.team.members }}
-    <div class="col-md-5 mb-5 text-left"> <!-- text-left keeps bios readable -->
-      {{ if .image }}
-      <img src="{{ .image | relURL }}" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 20px;">
+  <div class="row justify-content-center team-row">
+    {{/* Order follows academic convention: first author, co-founder, senior author */}}
+    {{ range slice "Vladimir" "Cyril" "Olivier" }}
+      {{ $key := . }}
+      {{ range $.Site.Data.team.members }}
+        {{ if strings.HasPrefix .name $key }}
+        <div class="col-12 col-md-4 team-member text-center">
+          {{ if .image }}
+          <img class="team-photo" src="{{ .image | relURL }}" alt="{{ .name }}">
+          {{ end }}
+          <h3 class="team-name">{{ .name }}</h3>
+          <p class="team-role"><strong>{{ .role }}</strong></p>
+          <p class="team-bio text-left">{{ .bio }}</p>
+        </div>
+        {{ end }}
       {{ end }}
-      <h3>{{ .name }}</h3>
-      <p class="text-primary"><strong>{{ .role }}</strong></p>
-      <p>{{ .bio }}</p>
-    </div>
     {{ end }}
   </div>
 </div>
