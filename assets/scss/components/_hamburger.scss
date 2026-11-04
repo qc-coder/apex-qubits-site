@@ -12,13 +12,18 @@
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
-    background: $graphite-neel;
+    background: $white;
   }
   .hamburger-inner::after {
     width: 18px;
     right: 0;
   }
   &.is-active {
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background-color: $white;
+    }
     .hamburger-inner::after {
       width: inherit;
       right: unset;
