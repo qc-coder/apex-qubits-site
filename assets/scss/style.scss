@@ -106,8 +106,8 @@
 
   .hero-text {
     font-size: 1.5rem; // Hardware for the quantum advantag eand beyond
-    font-weight: 300;
-    opacity: 0.7;
+    font-weight: 400;
+    opacity: 1;
   }
 }
 // Team page: three members on one laptop screen
@@ -137,5 +137,23 @@
     font-size: 0.9rem;
     line-height: 1.5;
     color: $signal-grey;
+  }
+}
+
+// Hero text readability over the wafer photo: a soft Abyss veil behind the centre
+.hero-image {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center, rgba(10, 12, 16, 0.78) 0%, rgba(10, 12, 16, 0.45) 55%, rgba(10, 12, 16, 0) 100%);
+    pointer-events: none;
+  }
+  .container {
+    position: relative;
+    z-index: 1;
   }
 }
