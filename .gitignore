@@ -1,0 +1,6 @@
+# Hugo build output (GitHub Actions builds the site on every push)
+public/
+resources/_gen/
+
+# macOS
+.DS_Store
