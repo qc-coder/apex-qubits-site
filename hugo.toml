@@ -6,6 +6,15 @@ theme = "hugo-hero"
 [params]
   description = "Advancing superconducting quantum hardware from laboratory research to integrated processor technology."
 
+[params.logo]
+  desktop = "images/logo.svg"
+  desktop_height = "48"
+  desktop_width = "48"
+  mobile = "images/logo.svg"
+  mobile_height = "40"
+  mobile_width = "40"
+  alt = "Apex Qubits"
+
 [params.footer]
   copyright_text = "© 2026 Apex Qubits&trade;. All rights reserved."
 
