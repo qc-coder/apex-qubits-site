@@ -157,3 +157,7 @@
     z-index: 1;
   }
 }
+
+// Tables in page content (key facts, team)
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0 28px; color: $near-white; }
+.content th, .content td { border-bottom: 1px solid rgba(255,255,255,.2); padding: 8px 10px; text-align: left; vertical-align: top; }

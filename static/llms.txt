@@ -1,0 +1,23 @@
+# Apex Qubits
+
+> Apex Qubits designs superconducting quantum processors, robust by design: standalone packaged chips, tested, with test data and root access.
+
+## Key facts
+- What we make: superconducting quantum processors, robust by design
+- Delivered as: standalone packaged chips in a sample holder, for standard hardware
+- Delivered with: test data and root access
+- For: labs and industrial companies, such as quantum startups; then research centers
+- Target: quantum error correction; the same processors serve other research that needs good qubits; in the long run, an Apex processor inside every future quantum data center
+- Stage: pre-incorporation; first processor-level demonstrator in preparation
+- Funding: grants for now; plans to raise soon
+- Support for our processor work: CNRS pre-maturation program, decision of 7 May 2026
+- Founder and CEO: Vladimir Milchakov, PhD
+- Co-founder: Cyril Mori, PhD
+- Scientific Advisor: Olivier Buisson, PhD
+- Contact: info@apexqubits.com
+
+## Pages
+- [About](https://apexqubits.com/): what we make, for whom, and where we stand
+- [Team](https://apexqubits.com/team/): founder, co-founder and scientific advisor
+- [News](https://apexqubits.com/news/): dated news, newest first
+- [Contact](https://apexqubits.com/contact/): info@apexqubits.com

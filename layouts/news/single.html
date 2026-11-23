@@ -1,0 +1,19 @@
+{{ define "header_css" }}{{ partial "news-style.html" . }}{{ end }}
+{{ define "main" }}
+{{ $photo := .Resources.GetMatch "*.jpg" }}
+<div class="container pt-10 pb-8">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 content news-single">
+      <h1 class="display-4 page-title">{{ .Title }}</h1>
+      <p class="news-meta"><time datetime="{{ .Params.dateISO }}">{{ .Params.dateDisplay }}</time></p>
+      {{ .Content }}
+      {{ if and $photo .Params.imageAlt }}
+      <figure>
+        <img src="{{ $photo.RelPermalink }}" width="{{ $photo.Width }}" height="{{ $photo.Height }}" alt="{{ .Params.imageAlt }}">
+        {{ with .Params.imageCaption }}<figcaption>{{ . }}</figcaption>{{ end }}
+      </figure>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Site.Title }} - {{ .Title }}{{ end }}{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{ block "meta_tags" . }}{{end}}
+  {{ block "meta_tags" . }}{{ partial "seo.html" . }}{{ end }}
   <link rel="icon" href="{{ "favicon.svg" | absURL }}" type="image/svg+xml">
   <link rel="icon" href="{{ "favicon-32.png" | absURL }}" sizes="32x32" type="image/png">
   <link rel="icon" href="{{ "favicon-16.png" | absURL }}" sizes="16x16" type="image/png">

@@ -1,0 +1,44 @@
+{{- if not (eq .Kind "404") -}}
+{{- $desc := .Description -}}
+{{- if and (not $desc) .Params.summary }}{{ $desc = .Params.summary }}{{ end -}}
+{{- if not $desc }}{{ $desc = .Site.Params.description }}{{ end -}}
+{{- $alt := .Site.Params.ogImageAlt -}}
+{{- $img := (index .Site.Params.images 0) | absURL -}}
+{{- $photo := .Resources.GetMatch "*.jpg" -}}
+{{- if and $photo .Params.imageAlt -}}
+  {{- $img = ($photo.Fill "1200x630 Center").Permalink -}}
+  {{- $alt = .Params.imageAlt -}}
+{{- end -}}
+{{- $isNews := and (eq .Section "news") .IsPage -}}
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ if $isNews }}article{{ else }}website{{ end }}">
+<meta property="og:image" content="{{ $img }}">
+<meta property="og:image:alt" content="{{ $alt }}">
+<meta name="twitter:card" content="summary_large_image">
+{{- if .IsHome }}
+{{- $org := dict "@context" "https://schema.org" "@type" "Organization" "name" "Apex Qubits" "url" "https://apexqubits.com/" "logo" "https://apexqubits.com/images/logo-black-on-white-512.png" "slogan" "Quantum processors, robust by design." "description" $desc "email" "info@apexqubits.com" "founder" (dict "@type" "Person" "name" "Vladimir Milchakov" "jobTitle" "Founder and CEO") }}
+<script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>
+{{- else if and (eq .Section "team") .IsSection }}
+{{- $apex := dict "@type" "Organization" "name" "Apex Qubits" "url" "https://apexqubits.com/" }}
+{{- $cnrs := dict "@type" "Organization" "name" "CNRS" }}
+{{- $neel := dict "@type" "Organization" "name" "CNRS, Institut Néel" }}
+{{- $v := dict "@type" "Person" "name" "Vladimir Milchakov" "honorificSuffix" "PhD" "jobTitle" "Founder and CEO" "worksFor" $apex "affiliation" (dict "@type" "Organization" "name" "Apex Qubits") "email" "founder@apexqubits.com" "image" "https://apexqubits.com/images/vladimir.jpg" }}
+{{- $c := dict "@type" "Person" "name" "Cyril Mori" "honorificSuffix" "PhD" "jobTitle" "Co-founder" "worksFor" $cnrs "affiliation" (slice $apex $neel) "image" "https://apexqubits.com/images/cyril.jpg" }}
+{{- $o := dict "@type" "Person" "name" "Olivier Buisson" "honorificSuffix" "PhD" "jobTitle" "Scientific Advisor" "worksFor" $cnrs "affiliation" (slice $apex $neel) "image" "https://apexqubits.com/images/olivier.jpeg" }}
+{{- $g := dict "@context" "https://schema.org" "@graph" (slice $v $c $o) }}
+<script type="application/ld+json">{{ $g | jsonify | safeJS }}</script>
+{{- else if $isNews }}
+{{- $pub := dict "@type" "Organization" "name" "Apex Qubits" "logo" (dict "@type" "ImageObject" "url" "https://apexqubits.com/images/logo-black-on-white-512.png") }}
+{{- $d := dict "@context" "https://schema.org" "@type" "NewsArticle" "headline" .Title "description" .Params.summary "datePublished" (.PublishDate.Format "2006-01-02") "dateModified" (.Lastmod.Format "2006-01-02") "author" (dict "@type" "Organization" "name" "Apex Qubits" "url" "https://apexqubits.com/") "publisher" $pub "mainEntityOfPage" .Permalink }}
+{{- if and $photo .Params.imageAlt }}
+  {{- $io := dict "@type" "ImageObject" "url" $photo.Permalink }}
+  {{- with .Params.imageCreditText }}{{ $io = merge $io (dict "creditText" .) }}{{ end }}
+  {{- $d = merge $d (dict "image" $io) }}
+{{- end }}
+<script type="application/ld+json">{{ $d | jsonify | safeJS }}</script>
+{{- end }}
+{{- end -}}

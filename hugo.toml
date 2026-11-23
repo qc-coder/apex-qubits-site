@@ -2,9 +2,12 @@ baseURL = "https://apexqubits.com"
 languageCode = "en-us"
 title = "Apex Qubits"
 theme = "hugo-hero"
+disableKinds = ["taxonomy", "term"]
 
 [params]
-  description = "Advancing superconducting quantum hardware from laboratory research to integrated processor technology."
+  description = "Apex Qubits designs superconducting quantum processors, robust by design: standalone packaged chips, tested, with test data and root access."
+  images = ["images/og-default.png"]
+  ogImageAlt = "Apex Qubits mark, white on black."
 
 [params.logo]
   desktop = "images/logo.svg"
@@ -19,16 +22,21 @@ theme = "hugo-hero"
   copyright_text = "© 2026 Apex Qubits&trade;. All rights reserved."
 
 [[menu.main]]
-    name = "About"
-    url = "/"          # This points to your homepage/about
-    weight = 1
+  name = "About"
+  url = "/"
+  weight = 1
 
 [[menu.main]]
-    name = "Team"
-    url = "/team/"     # This points to content/team/
-    weight = 2
-	
+  name = "Team"
+  url = "/team/"
+  weight = 2
+
 [[menu.main]]
-	name = "contact"
-	url = "/contact/"
-	weight = 3
+  name = "News"
+  url = "/news/"
+  weight = 3
+
+[[menu.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 4
