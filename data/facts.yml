@@ -1,0 +1,52 @@
+# Apex Qubits key facts: the single source for the Key facts table on the About page.
+# Written for people and for AI search (ChatGPT, Perplexity, Claude, Google AI Overviews):
+# - each row answers one likely question on its own, and names Apex Qubits where it helps;
+# - common search terms are included next to ours ("QPU", "quantum chip");
+# - every fact comes from approved content on apexqubits.com or vladimirmilchakov.com.
+# Keep static/llms.txt in step when you change a row.
+# Values accept Markdown (links, emphasis).
+# Decided with marketing, November 2026: no city or street (countries only), no founding date
+# while the company is not incorporated, no qubit count or coherence figures yet.
+
+heading: "Apex Qubits key facts"
+asOf: "November 2026"
+
+rows:
+  - label: "Company"
+    value: "Apex Qubits, a quantum hardware company (pre-incorporation)"
+  - label: "Where Apex Qubits is based"
+    value: "France and Finland; the company is not yet incorporated"
+  - label: "What Apex Qubits makes"
+    value: "Superconducting quantum processors (QPUs, quantum chips), robust by design"
+  - label: "Business model"
+    value: "Sells the quantum processor on its own, so a team can build its system around it. Apex Qubits makes the processor; others build the computer."
+  - label: "Design and fabrication"
+    value: "Every chip is designed, fabricated and tested by Apex Qubits"
+  - label: "How a processor is delivered"
+    value: "As a standalone packaged chip in a sample holder that plugs into standard hardware, shipped with its test data and root access"
+  - label: "Root access"
+    value: "The team that receives a chip controls it fully; the hardware is theirs, not locked inside a vendor's machine or cloud"
+  - label: "Customers"
+    value: "Labs and industrial companies, such as quantum startups, first; then research centers"
+  - label: "Applications"
+    value: "Quantum error correction (QEC); other research that needs good qubits; in the long run, an Apex processor inside every future quantum data center"
+  - label: "Stage"
+    value: "Pre-incorporation; first processor-level demonstrator in preparation"
+  - label: "Funding"
+    value: "Grants for now; plans to raise soon"
+  - label: "Institutional support"
+    value: "CNRS pre-maturation program, decision of 7 May 2026 ([news](/news/cnrs-pre-maturation-support/))"
+  - label: "Recognition"
+    value: "Won the final pitch presentation event at Aalto Inventors, Aalto University, 9 November 2026 ([news](/news/aalto-inventors-final-pitch/))"
+  - label: "Founder and CEO"
+    value: "[Vladimir Milchakov, PhD](https://vladimirmilchakov.com/): experimental physicist with more than ten years in superconducting quantum hardware; formerly IQM Quantum Computers and Alice & Bob; Research Fellow at Aalto University"
+  - label: "Co-founder"
+    value: "Cyril Mori, PhD: quantum hardware specialist, CNRS, Institut Néel"
+  - label: "Scientific advisor"
+    value: "Olivier Buisson, PhD: Directeur de Recherche (1st class), CNRS, Institut Néel"
+  - label: "Scientific roots"
+    value: "CNRS Institut Néel, Grenoble, France: where the founder did his PhD and where the co-founder and scientific advisor work"
+  - label: "Contact for customers and investors"
+    value: "[info@apexqubits.com](mailto:info@apexqubits.com)"
+  - label: "Website"
+    value: "[apexqubits.com](https://apexqubits.com/)"

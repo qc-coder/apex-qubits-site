@@ -1,0 +1,60 @@
+// Afterglow: an element cools like a black body. Temperature falls exponentially and
+// the colour follows a black-body table. The curves come from tools/afterglow/generate.py.
+// Red stays at full value on the whole path; green, blue and brightness carry the cooling.
+//
+// A slower cooling (larger time constant) is the same curve stretched in time, so one
+// generated curve serves every duration: pass a longer $duration for a slower glow.
+@import 'afterglow-curve';
+
+@property --glow-g {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+@property --glow-b {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+@property --glow-a {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+// $hot-text: text colour while lit. $glow: halo radius.
+@mixin afterglow($duration: $afterglow-duration, $hot-text: $abyss, $glow: 14px) {
+  --glow-g: #{$afterglow-rest-g};
+  --glow-b: #{$afterglow-rest-b};
+  background-color: #{"rgba(#{$afterglow-rest-r}, var(--glow-g), var(--glow-b), var(--glow-a))"};
+  box-shadow: 0 0 $glow #{"rgba(#{$afterglow-rest-r}, var(--glow-g), var(--glow-b), calc(var(--glow-a) * 0.55))"};
+  // Cooling, when the pointer leaves. The first line is the fallback for browsers
+  // without linear() easing; the second is the real curve.
+  transition: --glow-g $duration ease-out, --glow-b $duration ease-out, --glow-a $duration ease-in, color 120ms ease-out;
+  transition:
+    --glow-g $duration #{$afterglow-ease-g},
+    --glow-b $duration #{$afterglow-ease-b},
+    --glow-a $duration #{$afterglow-ease-a},
+    color 120ms ease-out;
+  &:hover,
+  &:focus-visible {
+    --glow-g: #{green($arc-gold)};
+    --glow-b: #{blue($arc-gold)};
+    --glow-a: 1;
+    color: $hot-text;
+    text-decoration: none;
+    // Heating is near instant, like switching the lamp on
+    transition:
+      --glow-g 40ms linear,
+      --glow-b 40ms linear,
+      --glow-a 40ms linear,
+      color 40ms linear;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+    &:hover,
+    &:focus-visible {
+      transition: none;
+    }
+  }
+}

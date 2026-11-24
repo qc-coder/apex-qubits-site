@@ -1,22 +1,19 @@
-.button {
+// Primary button: an unlit filament at rest (gold outline and text), it lights to gold on hover
+// and cools slowly when the pointer leaves: the menu afterglow, three times slower.
+.button,
+.content a.button {
   border-radius: 4px;
   white-space: nowrap;
   display: inline-block;
   padding: 7px 15px;
-  background: $arc-gold;
+  border: 1px solid rgba($arc-gold, 0.7);
   font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.025em;
-  color: $abyss;
+  color: $arc-gold;
   text-decoration: none;
-  -webkit-transition: all 0.15s ease;
-  transition: all 0.15s ease;
-  &:hover {
-    color: $abyss;
-    background-color: darken($arc-gold, 8%);
-    text-decoration: none;
-  }
+  @include afterglow($duration: $afterglow-duration * 3, $glow: 22px);
 }
 .button-white {
   border-radius: 4px;

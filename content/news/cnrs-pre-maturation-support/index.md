@@ -4,7 +4,7 @@ summary: "On 7 May 2026, CNRS decided to support our processor work through its 
 dateDisplay: "7 May 2026"
 dateISO: "2026-05-07"
 date: 2026-05-07
-publishDate: 2026-11-23
+publishDate: 2026-05-07
 lastmod: 2026-11-23
 imageAlt: "Vladimir Milchakov and Olivier Buisson at CNRS Innovation"
 imageCaption: "Vladimir Milchakov and Olivier Buisson at CNRS Innovation."

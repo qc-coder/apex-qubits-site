@@ -6,18 +6,6 @@
     <div class="col-12 col-md-10 content news-list">
       <h1 class="display-4 page-title">{{ .Title }}</h1>
       {{ .Content }}
-      <table>
-        <thead><tr><th>Date</th><th>Title</th><th>Summary</th></tr></thead>
-        <tbody>
-        {{ range $pages }}
-          <tr>
-            <td><time datetime="{{ .Params.dateISO }}">{{ .Params.dateDisplay }}</time></td>
-            <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
-            <td>{{ .Params.summary }}</td>
-          </tr>
-        {{ end }}
-        </tbody>
-      </table>
       {{ range $pages }}
       <div class="news-item">
         <p class="news-meta"><time datetime="{{ .Params.dateISO }}">{{ .Params.dateDisplay }}</time></p>

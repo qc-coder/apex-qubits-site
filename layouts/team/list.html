@@ -14,16 +14,13 @@
           {{ end }}
           <h2 class="team-name">{{ .name }}</h2>
           <p class="team-role"><strong>{{ .role }}</strong></p>
+          {{ with .affiliation }}<p class="team-affiliation">{{ . }}</p>{{ end }}
+          {{ with .email }}<p class="team-email"><a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
           <p class="team-bio text-left">{{ .bio }}</p>
         </div>
         {{ end }}
       {{ end }}
     {{ end }}
-  </div>
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-10 content text-left team-table">
-      {{ .Content }}
-    </div>
   </div>
 </div>
 {{ end }}

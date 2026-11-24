@@ -1,0 +1,15 @@
+{{- /* Key facts table from data/facts.yml.
+     Row headers are <th scope="row"> so parsers and AI crawlers read each row as "label: value";
+     the caption names the company and the date for tables lifted out of the page. */ -}}
+{{- $f := hugo.Data.facts -}}
+<section class="about-block about-facts" id="key-facts">
+<h2>{{ $f.heading }}</h2>
+<table>
+  <caption>{{ $f.heading }}, {{ $f.asOf }}</caption>
+  <tbody>
+  {{- range $f.rows }}
+    <tr><th scope="row">{{ .label }}</th><td>{{ .value | markdownify }}</td></tr>
+  {{- end }}
+  </tbody>
+</table>
+</section>

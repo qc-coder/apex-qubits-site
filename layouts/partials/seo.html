@@ -20,7 +20,8 @@
 <meta property="og:image:alt" content="{{ $alt }}">
 <meta name="twitter:card" content="summary_large_image">
 {{- if .IsHome }}
-{{- $org := dict "@context" "https://schema.org" "@type" "Organization" "name" "Apex Qubits" "url" "https://apexqubits.com/" "logo" "https://apexqubits.com/images/logo-black-on-white-512.png" "slogan" "Quantum processors, robust by design." "description" $desc "email" "info@apexqubits.com" "founder" (dict "@type" "Person" "name" "Vladimir Milchakov" "jobTitle" "Founder and CEO") }}
+{{- $founders := slice (dict "@type" "Person" "name" "Vladimir Milchakov" "jobTitle" "Founder and CEO" "url" "https://vladimirmilchakov.com/") (dict "@type" "Person" "name" "Cyril Mori" "jobTitle" "Co-founder") }}
+{{- $org := dict "@context" "https://schema.org" "@type" "Organization" "name" "Apex Qubits" "url" "https://apexqubits.com/" "logo" "https://apexqubits.com/images/logo-black-on-white-512.png" "slogan" "Quantum processors, robust by design." "description" $desc "email" "info@apexqubits.com" "founder" $founders "knowsAbout" (slice "superconducting quantum processors" "QPU" "superconducting qubits" "quantum error correction" "quantum chip fabrication") "award" "Winner, Aalto Inventors final pitch presentation event, 9 November 2026" "location" (slice (dict "@type" "Place" "address" (dict "@type" "PostalAddress" "addressCountry" "FR")) (dict "@type" "Place" "address" (dict "@type" "PostalAddress" "addressCountry" "FI"))) }}
 <script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>
 {{- else if and (eq .Section "team") .IsSection }}
 {{- $apex := dict "@type" "Organization" "name" "Apex Qubits" "url" "https://apexqubits.com/" }}

@@ -1,5 +1,5 @@
 // Font
-@import url('https://fonts.googleapis.com/css?family=Lato:400|Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap');
 
 // Bootstrap
 @import 'bootstrap-variables';
@@ -15,6 +15,7 @@
 @import 'components/footer';
 @import 'components/sub-footer';
 @import 'components/logo';
+@import 'components/afterglow';
 @import 'components/main-menu';
 @import 'components/main-menu-mobile';
 @import 'components/social';
@@ -133,6 +134,13 @@
     color: $frost-plus;
     margin-bottom: 10px;
   }
+  .team-affiliation,
+  .team-email {
+    font-size: 0.85rem;
+    color: $signal-grey;
+    margin-bottom: 4px;
+  }
+  .team-email { margin-bottom: 12px; }
   .team-bio {
     font-size: 0.9rem;
     line-height: 1.5;
@@ -158,6 +166,111 @@
   }
 }
 
-// Tables in page content (key facts, team)
+// Tables in page content
 .content table { width: 100%; border-collapse: collapse; margin: 16px 0 28px; color: $near-white; }
 .content th, .content td { border-bottom: 1px solid rgba(255,255,255,.2); padding: 8px 10px; text-align: left; vertical-align: top; }
+
+// About page: one editorial grid for every section.
+// Headings sit in a narrow left column, text in a wide right column, so all sections share one left edge.
+$about-text: #C9CDD4;          // body text on dark: lighter than Signal Grey for long reading
+$about-rule: rgba(255, 255, 255, 0.1);
+
+.about {
+  // Phones: more breathing room from the screen edge than the 10px grid gutter
+  @include media-breakpoint-down(sm) { > .row > .content { padding-left: 20px; padding-right: 20px; } }
+
+  .about-block {
+    margin: 0;
+    padding: 40px 0;
+    border-top: 1px solid $about-rule;
+    @include media-breakpoint-up(md) {
+      display: grid;
+      grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+      column-gap: 56px;
+      padding: 56px 0;
+      > * { grid-column: 2; }
+      > h2 { grid-column: 1; grid-row: 1 / span 20; }
+    }
+    h2 {
+      font-family: $font-family-heading;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 1.3;
+      color: $near-white;
+      margin-bottom: 16px;
+      text-wrap: balance;
+    }
+    p {
+      color: $about-text;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      max-width: 38em;
+    }
+    p:last-child { margin-bottom: 0; }
+  }
+
+  // Lead: large heading across the page, intro in the text column, the key line set apart
+  .about-lead {
+    border-top: 0;
+    padding-top: 8px;
+    > h2 {
+      grid-column: 1 / -1;
+      grid-row: auto;
+      max-width: 20em;
+      font-size: 2.1rem;
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      margin-bottom: 28px;
+    }
+    p { font-size: 1.2rem; color: $near-white; }
+    p:last-child {
+      margin-top: 28px;
+      padding-left: 20px;
+      border-left: 2px solid $arc-gold;
+      font-family: $font-family-heading;
+      font-size: 1.45rem;
+      line-height: 1.4;
+      color: $near-white;
+    }
+    @include media-breakpoint-up(md) {
+      > h2 { font-size: 3rem; margin-bottom: 24px; }
+    }
+  }
+
+  // Where we stand: same grid, heading in Frost to mark it as status, not argument
+  .about-status h2 { color: $frost-plus; }
+
+  // Write to us: the one filled panel on the page
+  .about-cta {
+    margin: 24px 0;
+    padding: 40px 24px;
+    border: 1px solid $about-rule;
+    border-radius: 4px;
+    background: $graphite-neel;
+    // On wider screens the panel bleeds outward by its padding, so its columns line up with the sections around it
+    @include media-breakpoint-up(md) { margin: 24px -40px; padding: 48px 40px; }
+    + .about-block { border-top: 0; }
+    p:last-child { margin-top: 28px; }
+    .button { padding: 11px 28px; }
+  }
+
+  // Key facts: quiet reference table in the text column (rendered from data/facts.yml)
+  .about-facts {
+    table { margin: -10px 0 0; font-size: 0.95rem; }
+    // The caption is for parsers and tables quoted out of context; the h2 already says it on screen
+    caption {
+      position: absolute; width: 1px; height: 1px; overflow: hidden;
+      clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+    }
+    th, td { padding: 11px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.07); line-height: 1.55; vertical-align: top; }
+    th { width: 34%; padding-right: 24px; color: $signal-grey; font-size: 0.875rem; font-weight: 400; }
+    td { color: $about-text; }
+    tr:last-child th, tr:last-child td { border-bottom: 0; }
+    @include media-breakpoint-down(sm) {
+      table { margin-top: 0; }
+      tr, th, td { display: block; width: 100% !important; }
+      th { padding-bottom: 0; border-bottom: 0; }
+    }
+  }
+}

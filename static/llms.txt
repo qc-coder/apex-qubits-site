@@ -2,22 +2,29 @@
 
 > Apex Qubits designs superconducting quantum processors, robust by design: standalone packaged chips, tested, with test data and root access.
 
-## Key facts
-- What we make: superconducting quantum processors, robust by design
-- Delivered as: standalone packaged chips in a sample holder, for standard hardware
-- Delivered with: test data and root access
-- For: labs and industrial companies, such as quantum startups; then research centers
-- Target: quantum error correction; the same processors serve other research that needs good qubits; in the long run, an Apex processor inside every future quantum data center
+## Key facts (November 2026)
+- Company: Apex Qubits, a quantum hardware company (pre-incorporation)
+- Where Apex Qubits is based: France and Finland; the company is not yet incorporated
+- What Apex Qubits makes: superconducting quantum processors (QPUs, quantum chips), robust by design
+- Business model: sells the quantum processor on its own, so a team can build its system around it. Apex Qubits makes the processor; others build the computer.
+- Design and fabrication: every chip is designed, fabricated and tested by Apex Qubits
+- How a processor is delivered: as a standalone packaged chip in a sample holder that plugs into standard hardware, shipped with its test data and root access
+- Root access: the team that receives a chip controls it fully; the hardware is theirs, not locked inside a vendor's machine or cloud
+- Customers: labs and industrial companies, such as quantum startups, first; then research centers
+- Applications: quantum error correction (QEC); other research that needs good qubits; in the long run, an Apex processor inside every future quantum data center
 - Stage: pre-incorporation; first processor-level demonstrator in preparation
 - Funding: grants for now; plans to raise soon
-- Support for our processor work: CNRS pre-maturation program, decision of 7 May 2026
-- Founder and CEO: Vladimir Milchakov, PhD
-- Co-founder: Cyril Mori, PhD
-- Scientific Advisor: Olivier Buisson, PhD
-- Contact: info@apexqubits.com
+- Institutional support: CNRS pre-maturation program, decision of 7 May 2026 (https://apexqubits.com/news/cnrs-pre-maturation-support/)
+- Recognition: won the final pitch presentation event at Aalto Inventors, Aalto University, 9 November 2026 (https://apexqubits.com/news/aalto-inventors-final-pitch/)
+- Founder and CEO: Vladimir Milchakov, PhD (https://vladimirmilchakov.com/): experimental physicist with more than ten years in superconducting quantum hardware; formerly IQM Quantum Computers and Alice & Bob; Research Fellow at Aalto University
+- Co-founder: Cyril Mori, PhD: quantum hardware specialist, CNRS, Institut Néel
+- Scientific advisor: Olivier Buisson, PhD: Directeur de Recherche (1st class), CNRS, Institut Néel
+- Scientific roots: CNRS Institut Néel, Grenoble, France: where the founder did his PhD and where the co-founder and scientific advisor work
+- Contact for customers and investors: info@apexqubits.com
+- Website: https://apexqubits.com/
 
 ## Pages
-- [About](https://apexqubits.com/): what we make, for whom, and where we stand
+- [About](https://apexqubits.com/): what we make, for whom, where we stand, and key facts
 - [Team](https://apexqubits.com/team/): founder, co-founder and scientific advisor
 - [News](https://apexqubits.com/news/): dated news, newest first
 - [Contact](https://apexqubits.com/contact/): info@apexqubits.com

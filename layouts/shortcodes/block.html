@@ -1,0 +1,8 @@
+{{- /* A styled block of markdown on the About page.
+     class: lead | point | status | cta | facts. Optional button-href and button-label add a button after the text. */ -}}
+<section class="about-block about-{{ .Get "class" }}">
+{{ .Inner | .Page.RenderString (dict "display" "block") }}
+{{- with .Get "button-href" }}
+<p><a class="button" href="{{ . }}">{{ $.Get "button-label" }}</a></p>
+{{- end }}
+</section>
