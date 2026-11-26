@@ -1,4 +1,4 @@
 ---
 title: "Team"
-description: "Apex Qubits team: Vladimir Milchakov, Founder and CEO; Cyril Mori, Co-founder; Olivier Buisson, Scientific Advisor. Quantum processors, robust by design."
+description: "Apex Qubits team: Vladimir Milchakov, Founder & CEO; Cyril Mori, Co-founder & CTO; Olivier Buisson, Co-founder & Chief Scientist. Quantum processors, robust by design."
 ---

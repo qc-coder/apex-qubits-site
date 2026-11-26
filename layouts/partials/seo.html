@@ -20,16 +20,16 @@
 <meta property="og:image:alt" content="{{ $alt }}">
 <meta name="twitter:card" content="summary_large_image">
 {{- if .IsHome }}
-{{- $founders := slice (dict "@type" "Person" "name" "Vladimir Milchakov" "jobTitle" "Founder and CEO" "url" "https://vladimirmilchakov.com/") (dict "@type" "Person" "name" "Cyril Mori" "jobTitle" "Co-founder") }}
+{{- $founders := slice (dict "@type" "Person" "name" "Vladimir Milchakov" "jobTitle" "Founder & CEO" "url" "https://vladimirmilchakov.com/") (dict "@type" "Person" "name" "Cyril Mori" "jobTitle" "Co-founder & CTO") (dict "@type" "Person" "name" "Olivier Buisson" "jobTitle" "Co-founder & Chief Scientist") }}
 {{- $org := dict "@context" "https://schema.org" "@type" "Organization" "name" "Apex Qubits" "url" "https://apexqubits.com/" "logo" "https://apexqubits.com/images/logo-black-on-white-512.png" "slogan" "Quantum processors, robust by design." "description" $desc "email" "info@apexqubits.com" "founder" $founders "knowsAbout" (slice "superconducting quantum processors" "QPU" "superconducting qubits" "quantum error correction" "quantum chip fabrication") "award" "Winner, Aalto Inventors final pitch presentation event, 9 November 2026" "location" (slice (dict "@type" "Place" "address" (dict "@type" "PostalAddress" "addressCountry" "FR")) (dict "@type" "Place" "address" (dict "@type" "PostalAddress" "addressCountry" "FI"))) }}
 <script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>
 {{- else if and (eq .Section "team") .IsSection }}
 {{- $apex := dict "@type" "Organization" "name" "Apex Qubits" "url" "https://apexqubits.com/" }}
 {{- $cnrs := dict "@type" "Organization" "name" "CNRS" }}
 {{- $neel := dict "@type" "Organization" "name" "CNRS, Institut Néel" }}
-{{- $v := dict "@type" "Person" "name" "Vladimir Milchakov" "honorificSuffix" "PhD" "jobTitle" "Founder and CEO" "worksFor" $apex "affiliation" (dict "@type" "Organization" "name" "Apex Qubits") "email" "founder@apexqubits.com" "image" "https://apexqubits.com/images/vladimir.jpg" }}
-{{- $c := dict "@type" "Person" "name" "Cyril Mori" "honorificSuffix" "PhD" "jobTitle" "Co-founder" "worksFor" $cnrs "affiliation" (slice $apex $neel) "image" "https://apexqubits.com/images/cyril.jpg" }}
-{{- $o := dict "@type" "Person" "name" "Olivier Buisson" "honorificSuffix" "PhD" "jobTitle" "Scientific Advisor" "worksFor" $cnrs "affiliation" (slice $apex $neel) "image" "https://apexqubits.com/images/olivier.jpeg" }}
+{{- $v := dict "@type" "Person" "name" "Vladimir Milchakov" "honorificSuffix" "PhD" "jobTitle" "Founder & CEO" "worksFor" $apex "affiliation" (dict "@type" "Organization" "name" "Apex Qubits") "email" "founder@apexqubits.com" "image" "https://apexqubits.com/images/vladimir.jpg" }}
+{{- $c := dict "@type" "Person" "name" "Cyril Mori" "honorificSuffix" "PhD" "jobTitle" "Co-founder & CTO" "worksFor" $cnrs "affiliation" (slice $apex $neel) "image" "https://apexqubits.com/images/cyril.jpg" }}
+{{- $o := dict "@type" "Person" "name" "Olivier Buisson" "honorificSuffix" "PhD" "jobTitle" "Co-founder & Chief Scientist" "worksFor" $cnrs "affiliation" (slice $apex $neel) "image" "https://apexqubits.com/images/olivier.jpeg" }}
 {{- $g := dict "@context" "https://schema.org" "@graph" (slice $v $c $o) }}
 <script type="application/ld+json">{{ $g | jsonify | safeJS }}</script>
 {{- else if $isNews }}

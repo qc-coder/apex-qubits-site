@@ -16,15 +16,15 @@
 - Funding: grants for now; plans to raise soon
 - Institutional support: CNRS pre-maturation program, decision of 7 May 2026 (https://apexqubits.com/news/cnrs-pre-maturation-support/)
 - Recognition: won the final pitch presentation event at Aalto Inventors, Aalto University, 9 November 2026 (https://apexqubits.com/news/aalto-inventors-final-pitch/)
-- Founder and CEO: Vladimir Milchakov, PhD (https://vladimirmilchakov.com/): experimental physicist with more than ten years in superconducting quantum hardware; formerly IQM Quantum Computers and Alice & Bob; Research Fellow at Aalto University
-- Co-founder: Cyril Mori, PhD: quantum hardware specialist, CNRS, Institut Néel
-- Scientific advisor: Olivier Buisson, PhD: Directeur de Recherche (1st class), CNRS, Institut Néel
-- Scientific roots: CNRS Institut Néel, Grenoble, France: where the founder did his PhD and where the co-founder and scientific advisor work
+- Founder & CEO: Vladimir Milchakov, PhD (https://vladimirmilchakov.com/): experimental physicist with more than ten years in superconducting quantum hardware; formerly IQM Quantum Computers and Alice & Bob; Research Fellow at Aalto University
+- Co-founder & CTO: Cyril Mori, PhD: quantum hardware specialist, CNRS, Institut Néel
+- Co-founder & Chief Scientist: Olivier Buisson, PhD: Directeur de Recherche (1st class), CNRS, Institut Néel
+- Scientific roots: CNRS Institut Néel, Grenoble, France: where the founder did his PhD and where the two co-founders work
 - Contact for customers and investors: info@apexqubits.com
 - Website: https://apexqubits.com/
 
 ## Pages
 - [About](https://apexqubits.com/): what we make, for whom, where we stand, and key facts
-- [Team](https://apexqubits.com/team/): founder, co-founder and scientific advisor
+- [Team](https://apexqubits.com/team/): founder and two co-founders
 - [News](https://apexqubits.com/news/): dated news, newest first
 - [Contact](https://apexqubits.com/contact/): info@apexqubits.com
