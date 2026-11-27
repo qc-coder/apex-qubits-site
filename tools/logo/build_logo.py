@@ -17,6 +17,9 @@ import io, os, re, sys
 
 LINE = 0.05
 LINE_ICON = 0.065
+# Tab favicons (favicon.svg, 16, 32, .ico) are drawn at 16-32 px, where four steps per arm cannot
+# show their gaps. They use a simplified tower: two steps per arm, thicker blocks, much wider lines.
+SMALL = dict(steps=2, first_h=0.32, line=0.17, margin=0.08)
 ABYSS = "#0A0C10"
 SIZE = 1000
 
@@ -32,17 +35,21 @@ static = os.path.join(site, "static")
 
 P = dict(A.PRESETS["photo"])
 view = A.make_view("isometric", None, None)
-blocks = A.gen_blocks(P)
-faces = A.faces_2d(blocks, view)
+FULL = (A.gen_blocks(P),)
+FULL += (A.faces_2d(FULL[0], view),)
+PS = dict(P, steps=SMALL["steps"], first_h=SMALL["first_h"])
+SIMPLE = (A.gen_blocks(PS),)
+SIMPLE += (A.faces_2d(SIMPLE[0], view),)
 
 
-def svg(style, line, margin, colors=None):
+def svg(style, line, margin, colors=None, geo=FULL):
+    blocks, faces = geo
     return A.render_svg_exact(faces, blocks, view, style, line, SIZE, margin=margin, colors=colors or {})
 
 
-def mark(line, margin, fill="#FFFFFF"):
+def mark(line, margin, fill="#FFFFFF", geo=FULL):
     """Faces only, transparent background and gaps: the gaps show whatever is behind."""
-    s = svg("inverse", line, margin, {"bg": "none", "line": "none", "fill": fill})
+    s = svg("inverse", line, margin, {"bg": "none", "line": "none", "fill": fill}, geo)
     s = re.sub(r'<rect [^>]*/>\n', "", s)
     return re.sub(r'<path fill="none"[^>]*/>\n', "", s)
 
@@ -79,13 +86,17 @@ write("images/logo.svg", titled(mark(LINE, 0.03)))
 # Structured-data logo: black faces, white gaps, on white, with a real margin.
 save("images/logo-black-on-white-512.png", raster(svg("solid", LINE, 0.12), 512, alpha=False))
 
-# Favicon: white mark on a rounded abyss tile, with room inside the rounded corners.
+# Favicons: white mark on a rounded abyss tile. Tab sizes use the simplified tower;
+# 96 px and up (bookmarks, Android home screen) use the full logo with room inside the corners.
 R = 0.16 * SIZE
 tile = f'<rect width="{SIZE}" height="{SIZE}" rx="{R:.0f}" fill="{ABYSS}"/>\n'
-fav = titled(mark(LINE_ICON, 0.15), tile)
+fav = titled(mark(SMALL["line"], SMALL["margin"], geo=SIMPLE), tile)
+fav_full = titled(mark(LINE_ICON, 0.15), tile)
 write("favicon.svg", fav)
-for px in (16, 32, 96, 192, 512):
+for px in (16, 32):
     save(f"favicon-{px}.png", raster(fav, px))
+for px in (96, 192, 512):
+    save(f"favicon-{px}.png", raster(fav_full, px))
 ico = raster(fav, 256)
 ico.save(os.path.join(static, "favicon.ico"), sizes=[(16, 16), (32, 32), (48, 48)])
 print("favicon.ico")

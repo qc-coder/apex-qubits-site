@@ -1,30 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-label="Apex Qubits"><title>Apex Qubits</title><rect width="1000" height="1000" rx="160" fill="#0A0C10"/>
 
-<path fill="#FFFFFF" fill-rule="evenodd" d="M689.10,447.74 L507.53,552.57 L507.53,510.93 L689.10,406.10 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M681.57,393.05 L500.00,497.88 L318.43,393.05 L344.66,377.91 L500.00,467.59 L655.34,377.91 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M310.90,406.10 L492.47,510.93 L492.47,552.57 L310.90,447.74 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M740.22,524.94 L584.88,614.62 L584.88,793.99 L558.65,809.13 L558.65,599.48 L740.22,494.65 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M732.69,481.60 L551.12,586.43 L515.06,565.61 L696.63,460.78 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M507.53,578.66 L543.59,599.48 L543.59,809.13 L507.53,788.31 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M492.47,788.31 L456.41,809.13 L456.41,599.48 L492.47,578.66 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M484.94,565.61 L448.88,586.43 L267.31,481.60 L303.37,460.78 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M259.78,494.65 L441.35,599.48 L441.35,809.13 L415.12,793.99 L415.12,614.62 L259.78,524.94 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M647.81,364.87 L507.53,445.85 L507.53,404.21 L647.81,323.23 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M377.28,300.04 L500.00,370.90 L622.72,300.04 L640.27,310.18 L500.00,391.17 L359.73,310.18 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M352.19,323.23 L492.47,404.21 L492.47,445.85 L352.19,364.87 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M791.35,592.12 L668.63,662.97 L668.63,804.67 L651.07,814.81 L651.07,652.83 L791.35,571.84 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M783.81,558.80 L643.54,639.79 L607.48,618.97 L747.75,537.98 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M599.95,632.01 L636.01,652.83 L636.01,814.81 L599.95,793.99 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M400.05,793.99 L363.99,814.81 L363.99,652.83 L400.05,632.01 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M392.52,618.97 L356.46,639.79 L216.19,558.80 L252.25,537.98 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M208.65,571.84 L348.93,652.83 L348.93,814.81 L331.37,804.67 L331.37,662.97 L208.65,592.12 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M615.19,287.00 L507.53,349.15 L507.53,307.51 L615.19,245.36 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M607.65,232.32 L500.00,294.47 L392.35,232.32 L500.00,170.16 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M384.81,245.36 L492.47,307.51 L492.47,349.15 L384.81,287.00 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M842.47,763.34 L734.81,825.49 L734.81,701.18 L842.47,639.03 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M834.94,625.98 L727.28,688.14 L691.22,667.32 L798.88,605.16 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M683.69,680.36 L719.75,701.18 L719.75,825.49 L683.69,804.67 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M316.31,804.67 L280.25,825.49 L280.25,701.18 L316.31,680.36 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M308.78,667.32 L272.72,688.14 L165.06,625.98 L201.12,605.16 Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M157.53,763.34 L157.53,639.03 L265.19,701.18 L265.19,825.49 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M729.28,400.68 L525.52,518.31 L525.52,483.11 L729.28,365.47 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M298.71,319.84 L500.00,436.06 L701.29,319.84 L703.75,321.26 L500.00,438.90 L296.25,321.26 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M270.72,365.47 L474.48,483.11 L474.48,518.31 L270.72,400.68 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M810.81,509.54 L609.52,625.75 L609.52,858.19 L607.06,859.61 L607.06,624.33 L810.81,506.70 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M785.29,462.49 L581.54,580.12 L551.05,562.52 L754.80,444.88 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M525.52,606.73 L556.01,624.33 L556.01,859.61 L525.52,842.01 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M474.48,842.01 L443.99,859.61 L443.99,624.33 L474.48,606.73 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M448.95,562.52 L418.46,580.12 L214.71,462.49 L245.20,444.88 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M189.19,506.70 L392.94,624.33 L392.94,859.61 L390.48,858.19 L390.48,625.75 L189.19,509.54 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M675.77,275.63 L525.52,362.38 L525.52,327.17 L675.77,240.43 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M650.25,196.22 L500.00,282.96 L349.75,196.22 L500.00,109.47 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M324.23,240.43 L474.48,327.17 L474.48,362.38 L324.23,275.63 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M892.35,789.05 L742.11,875.79 L742.11,702.30 L892.35,615.56 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M866.83,571.35 L716.58,658.09 L686.09,640.49 L836.34,553.75 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M660.57,684.70 L691.06,702.30 L691.06,875.79 L660.57,858.19 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M339.43,858.19 L308.94,875.79 L308.94,702.30 L339.43,684.70 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M313.91,640.49 L283.42,658.09 L133.17,571.35 L163.66,553.75 Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M107.65,789.05 L107.65,615.56 L257.89,702.30 L257.89,875.79 Z"/>
 </svg>
